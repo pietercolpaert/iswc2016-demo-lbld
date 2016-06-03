@@ -26,12 +26,12 @@
     <!-- /END Visualisation requirements (mandatory for optimal reading) -->
     
     <!-- Metadata -->
-    <title about="" property="dcterms:title">Local Decisions as Linked Data -- a proof of concept</title>
+    <title about="#" property="dcterms:title">Local Decisions as Linked Data: a proof of concept</title>
     
     <!-- Author's data (one or more) -->
-    <meta about="http://raf.be/#buyle" typeof="schema:Person" name="dc.creator" property="schema:name" content="Raf Buyle"/>
-    <meta about="http://raf.be/#buyle" property="schema:email" content="raf.buyle@agiv.be"/>
-    <link about="http://raf.be/#buyle" property="schema:affiliation" href="http://informatie.vlaanderen/#id"/>
+    <meta about="#buyle" typeof="schema:Person" name="dc.creator" property="schema:name" content="Raf Buyle"/>
+    <meta about="#buyle" property="schema:email" content="raf.buyle@agiv.be"/>
+    <link about="#buyle" property="schema:affiliation" href="http://informatie.vlaanderen/#id"/>
     
     <meta about="http://pieter.pm/#me" typeof="schema:Person" name="dc.creator" property="schema:name" content="Pieter Colpaert"/>
     <meta about="http://pieter.pm/#me" property="schema:email" content="pieter.colpaert@ugent.be"/>
@@ -44,7 +44,10 @@
     <meta about="http://lokaalbestuur.vlaanderen.be/#id" property="schema:name" typeof="schema:Organization" content="Agentschap Binnenlands Bestuur"/>
     
     <!-- Paper keywords (one or more) -->
-    <meta about="a:version-of-record" property="prism:keyword" content="Digital Publishing"/>
+    <meta about="#" property="prism:keyword" content="Linked Data"/>
+    <meta about="#" property="prism:keyword" content="Digital Publishing"/>
+    <meta about="#" property="prism:keyword" content="Local Affairs"/>
+    <meta about="#" property="prism:keyword" content="Public Administration"/>
     <!-- /END Metadata -->
 
     <script language="application/ld+json">
@@ -55,31 +58,58 @@
     <!-- Abstract -->
     <section role="doc-abstract">
       <h1>Abstract</h1>
-      <p></p>
+      <p>
+        Base registries are <font color="red">todo</font>.
+        Until today, maintaining a base registry comes with extra maintenance costs to create the dataset and keep it up to date.
+        We study the possibility to entangle the maintenance of base registries at the core of existing administrative processes, to reduce the cost of maintaining a new data source.
+        In this paper, we demo a way to manage local decisions as linked data which creates a new base registry for mandates.
+        We found that no extra effort was needed in the process by local administrations.
+        We show that an end-to-end approach for Local Decisions as Linked Data is feasible.
+        Furthermore, we obtained political leverage to implement the ideas behind this PoC and roll it out for the region of Flanders in Belgium.
+      </p>
     </section>
     <!-- Sections -->
     <section id="sec_introduction">
       <h1>Introduction</h1>
-      <p></p>
+      <p>
+        Councils are empowered by law, to make decisions on many matters of importance to their local communities.
+        Decisions are made in formally constituted council meetings. Local government data, digitizing these decisions, is locked in data silo's and therefore manually registered  in the authorative data source of the regional government. Imagine a smart city where public decision-making is easy for all to follow using any digital channel. s.a. "the effects of local tax policy" or an insight in "the public procurement".
+      </p>
+      <p>
+        This pilot is a stepstone in the transition of the  Flemish Agency for Domestic Governance  towards an administration with a greater focus on policy development in terms of better administrative processes.
+      </p>
     </section>
     <section id="sec_relwork">
       <h1>Related work</h1>
-      <p></p>
+      <p>Within European policies today, there is on-going work towards base registries, trusted datasets, authoritative sources and appointing responsible parties to collect certain information.
+
+A base registry (BR) is a trusted authentic source of information under the control of an appointed public administration or organisation appointed by government [1]
+trusted means that the local government is managing the local council decisions conformant to best practices in all EIF-domains [2], more specific at the level of semantic and organizational interoperability  and conformant to legal requirements  (Flemish Decree *?). On the semantic level we’ve defined a vocabulary for council decisions and the organizational level and we’ve organized working groups with the local and regional governments, where they have agreed on decentralized processes which provide data to the base registry, using the principles of linked data.
+authentic means that this is considered to be THE source of information which represents the correct status and which kept constantly up-to-date and is of highest possible quality. This is archieved by avoiding public servants to copy the information into a separated form or application. When the registered data is part of the core processes of the local administrations and used in their own information systems, we expect this will improve the quality.
+under control means that all measures have been taken that only parties that have a necessity & finality & authorisation can access the information in proportionality with their needs. (nope,   the POC we’ve focused on data not under privacy regulations)
+appointed means: that the governing administration, the Flemish Agency for Domestic Governance, has a legal basis to collect and maintain the respective information.</p>
     </section>
-    
+
     <section id="sec_tools">
       <h1>Method and implementation</h1>
-      <p></p>
+      <p>We interviewed X service providers for their stance on Linked Data, interviewed Y local governments on how they register and publish local council decisions. We also organized 3 workshops which formed the input for a software engineer to create a proof of concept.
+ 
+The domain concepts were formalized into two Linked Data vocabularies: one for the metadata and one for describing public mandates. The proof of consists of 5 components: an editor for local decisions, an HTML-page publishing service responsible for URI dereferencing, a crawler for local decisions and 2 reuse examples on top of the harvested data.</p>
     </section>
     
     <section id="sec_demo">
       <h1>Demo</h1>
       <p></p>
     </section>
+
+    <div id="example">
+      <ul id="list">
+      </ul>
+    </div>
     
     <section id="sec_conclusion">
-      <h1>Conclusions</h1>
-      <p></p>
+      <h1>Conclusion</h1>
+      <p>The insights from the interviews are showing that, when registering council data is embedded in the core processes and information systems of the local administrations, the quality will improve, as evidenced by ...,. The proof of concept shows that an end-to-end approach, based on the developed linked data method, is reachable. The pilot and these insights created a political basis to build a base registry for local council decisions in line with the best practices of this study.</p>
     </section>
     
     <!-- References -->
@@ -87,11 +117,8 @@
       <h1>References</h1>
       <ol about="a:version-of-record" rel="cito:cites">
         <li id="shotton-sempub" about="c:shotton-sempub-expression" typeof="fabio:JournalArticle" property="frbr:realizationOf" resource="c:shotton-sempub-work" role="doc-biblioentry"><p about="c:shotton-sempub-expression" property="dcterms:bibliographicCitation">Shotton, D., Portwin, K., Klyne, G., &amp; Miles, A. (2009). Adventures in Semantic Publishing: Exemplar Semantic Enhancements of a Research Article. PLoS Computational Biology, 5(4): e1000361. <a about="c:shotton-sempub-work" typeof="fabio:ResearchPaper" href="http://dx.doi.org/10.1371/journal.pcbi.1000361">http://dx.doi.org/<span about="c:shotton-sempub-expression" property="prism:doi">10.1371/journal.pcbi.1000361</span></a></p></li>
-        <li id="patterns" about="c:patterns-expression" typeof="fabio:JournalArticle" property="frbr:realizationOf" resource="c:patterns-work" role="doc-biblioentry"><p about="c:patterns-expression" property="dcterms:bibliographicCitation">Di Iorio, A., Peroni, S., Poggi, F., &amp; Vitali, F. (2014). Dealing with structural patterns of XML documents. Journal of the American Society for Information Science and Technology, 65(9): 1884–1900. <a about="c:patterns-work" typeof="fabio:ResearchPaper" href="http://dx.doi.org/10.1002/asi.23088">http://dx.doi.org/<span about="c:patterns-expression" property="prism:doi">10.1002/asi.23088</span></a></p></li>
-        <li id="doco" about="c:doco-expression" typeof="fabio:JournalArticle" property="frbr:realizationOf" resource="c:doco-work" role="doc-biblioentry"><p about="c:doco-expression" property="dcterms:bibliographicCitation">Constantin, A., Peroni, S., Pettifer, S., Shotton, D., &amp; Vitali, F. (in press). The Document Component Ontology (DoCO). To appear in Semantic Web. <span about="c:doco-work" typeof="fabio:ResearchPaper">OA version available at <a about="c:doco-expression" property="fabio:hasRepresentation" href="http://www.semantic-web-journal.net/system/files/swj1016.pdf">http://www.semantic-web-journal.net/system/files/swj1016.pdf</a></span></p></li>
-        <li id="linked-research" about="c:linked-research-expression" typeof="fabio:ConferencePaper" property="frbr:realizationOf" resource="c:linked-research-work" role="doc-biblioentry"><p about="c:linked-research-expression" property="dcterms:bibliographicCitation">Capadisli, S., Riedl, R., &amp; Auer, S. (2015). Enabling Accessible Knowledge. In Proc. of CeDEM 2015. <span about="c:linked-research-work" typeof="fabio:ResearchPaper">OA version available at <a about="c:linked-research-expression" property="fabio:hasRepresentation" href="http://csarven.ca/enabling-accessible-knowledge">http://csarven.ca/enabling-accessible-knowledge</a></span></p></li>
-        <li id="scholmd" about="c:scholmd-expression" typeof="fabio:WebContent" property="frbr:realizationOf" resource="c:scholmd-work" role="doc-biblioentry"><p about="c:scholmd-expression" property="dcterms:bibliographicCitation">Lin, T. T. Y., &amp; Beales, G. (2015). ScholarlyMarkdown Syntax Guide. Guide, 31 January 2015. <a about="c:scholmd-work" typeof="fabio:InstructionalWork" property="fabio:hasURL" content="http://scholarlymarkdown.com/Scholarly-Markdown-Guide.html" href="http://scholarlymarkdown.com/Scholarly-Markdown-Guide.html">http://scholarlymarkdown.com/Scholarly-Markdown-Guide.html</a></p></li>
-        <li id="force11" about="c:force11-expression" typeof="fabio:WhitePaper" property="frbr:realizationOf" resource="c:force11-work" role="doc-biblioentry"><p about="c:force11-expression" property="dcterms:bibliographicCitation">Bourne, P. E., Clark, T., Dale, R., de Waard, A., Herman, I., Hovy, E. H., &amp; Shotton, D. (2011). FORCE11 White Paper: Improving The Future of Research Communications and e-Scholarship. White paper, 28 October 2011. FORCE11. <a about="c:force11-work" typeof="fabio:MeetingReport" property="fabio:hasURL" content="https://www.force11.org/white_paper" href="https://www.force11.org/white_paper">https://www.force11.org/white_paper</a></p></li>
+        <li>Base registry definition: http://ec.europa.eu/isa/actions/documents/isa_1.2_d1.2_base_registry_definition.pdf</li>
+        <li>http://ec.europa.eu/isa/documents/isa_annex_ii_eif_en.pdf (p21)</li>
       </ol>
     </section>
     
@@ -101,5 +128,45 @@
         <p></p>
       </section>
     </section>
+    <script src="http://vlavirgem.pieter.pm/jsonld.min.js"></script>
+    <script>
+    function fetchDecisions (compactCallback) {
+      var frame = {
+        "@context" : { "dcterms": "http://purl.org/dc/terms/",
+          "editor": "http://lblod.github.io/editor/assets/editor.json#",
+          "people": "http://lblod.github.io/editor/assets/people.json#",
+          "foaf": "http://xmlns.com/foaf/0.1/",
+          "hydra": "http://www.w3.org/ns/hydra/core#",
+          "lbld": "http://decisions.data.vlaanderen.be/ns#",
+          "mandaat": "http://mandates.data.vlaanderen.be/ns#",
+          "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+          "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+          "schema": "http://schema.org/",
+          "skos": "http://www.w3.org/2004/02/skos/core#",
+          "void": "http://rdfs.org/ns/void#",
+          "xsd": "http://www.w3.org/2001/XMLSchema#"
+        },
+        "@graph" : [
+          { "@type": "lbld:Decision", "schema:event" : { "lbld:organization" : "http://vlavirgem.pieter.pm/#gemeenteraad" } } 
+        ]
+      }
+      $.getJSON('http://linkeddatatestagiv.cloudapp.net/poc/decisions.jsonld?limit=100000').success(function(data) {
+        jsonld.frame(data, frame, compactCallback)
+      })
+    };
+    
+    fetchDecisions(function (error, decisions) {
+      console.log(decisions);
+      var html = '';
+      for (var i = 0; i < decisions["@graph"].length; i++) {
+        var bbc = '';
+        if (decisions["@graph"][i]["lbld:bbcCode"]) {
+            bbc = '<span class="badge">' + decisions["@graph"][i]["lbld:bbcCode"] + '</span>';
+        }
+        html += '<li class="list-group-item"><a href="' + decisions["@graph"][i]["@id"] + '" target="_blank">' + decisions["@graph"][i]["dcterms:title"] + '</a> ' + bbc + '</li>';
+      }
+      $('#list').html(html);
+    });
+    </script>
   </body>
 </html>
