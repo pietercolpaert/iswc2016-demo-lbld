@@ -36,12 +36,32 @@
     <meta about="http://pieter.pm/#me" typeof="schema:Person" name="dc.creator" property="schema:name" content="Pieter Colpaert"/>
     <meta about="http://pieter.pm/#me" property="schema:email" content="pieter.colpaert@ugent.be"/>
     <link about="http://pieter.pm/#me" property="schema:affiliation" href="http://datasciencelab.ugent.be/#organization"/>
+
+    <meta about="#mathias" typeof="schema:Person" name="dc.creator" property="schema:name" content="Mathias Van Compernolle"/>
+    <meta about="#mathias" property="schema:email" content="mathias.vancompernolle@ugent.be"/>
+    <link about="#mathias" property="schema:affiliation" href="http://mict.ugent.be/#organization"/>
+    
+    <meta about="#peter" typeof="schema:Person" name="dc.creator" property="schema:name" content="Peter Mechant"/>
+    <meta about="#peter" property="schema:email" content="peter.mechant@ugent.be"/>
+    <link about="#peter" property="schema:affiliation" href="http://mict.ugent.be/#organization"/>
+
+    <meta about="#veronique" typeof="schema:Person" name="dc.creator" property="schema:name" content="Veronique Volders"/>
+    <meta about="#veronique" property="schema:email" content="veronique.volders@.be"/>
+    <link about="#veronique" property="schema:affiliation" href="http://lokaalbestuur.vlaanderen.be/#id"/>
+    
+    <meta about="http://ruben.verborgh.be/#me" typeof="schema:Person" name="dc.creator" property="schema:name" content="Ruben Verborgh"/>
+    <meta about="http://ruben.verborgh.be/#me" property="schema:email" content="ruben.verborgh@ugent.be"/>
+    <link about="http://ruben.verborgh.be/#me" property="schema:affiliation" href="http://datasciencelab.ugent.be/#organization"/>
+    
+    <meta about="#erik" typeof="schema:Person" name="dc.creator" property="schema:name" content="Erik Mannens"/>
+    <meta about="#erik" property="schema:email" content="erik.mannens@ugent.be"/>
+    <link about="#erik" property="schema:affiliation" href="http://datasciencelab.ugent.be/#organization"/>
     
     <!-- Affiliations -->
-    <meta about="http://datasciencelab.ugent.be/#organization" property="schema:name" typeof="schema:Organization" content="Data Science Lab"/>
-    <meta about="http://mict.ugent.be/#organization" property="schema:name" typeof="schema:Organization" content="MICT"/>
-    <meta about="http://informatie.vlaanderen/#id" property="schema:name" typeof="schema:Organization" content="Departement Informatie Vlaanderen"/>
-    <meta about="http://lokaalbestuur.vlaanderen.be/#id" property="schema:name" typeof="schema:Organization" content="Agentschap Binnenlands Bestuur"/>
+    <meta about="http://datasciencelab.ugent.be/#organization" property="schema:name" typeof="schema:Organization" content="Data Science Lab - iMinds - Ghent University"/>
+    <meta about="http://mict.ugent.be/#organization" property="schema:name" typeof="schema:Organization" content="MICT - iMinds - Ghent University"/>
+    <meta about="http://informatie.vlaanderen/#id" property="schema:name" typeof="schema:Organization" content="Department Information Flanders"/>
+    <meta about="http://lokaalbestuur.vlaanderen.be/#id" property="schema:name" typeof="schema:Organization" content="Agency of Internal Affairs Flanders"/>
     
     <!-- Paper keywords (one or more) -->
     <meta about="#" property="prism:keyword" content="Linked Data"/>
@@ -49,23 +69,43 @@
     <meta about="#" property="prism:keyword" content="Local Affairs"/>
     <meta about="#" property="prism:keyword" content="Public Administration"/>
     <!-- /END Metadata -->
-
+    
     <script language="application/ld+json">
       {}
     </script>
+
+    <style>
+      @media print {
+        .no-print, .no-print * {
+          display: none !important;
+        }
+      }
+      todo {
+        color: red;
+      }
+      todo:before {
+        content : "TODO: ";
+      }
+      pc {
+        color: blue;
+      }
+      pc:before {
+        content : "Pieter: ";
+      }
+    </style>
   </head>
   <body>
     <!-- Abstract -->
     <section role="doc-abstract">
       <h1>Abstract</h1>
       <p>
-        Base registries are <font color="red">todo</font>.
+        Base registries are <pc>Raf, can you add the definition here?</pc>.
         Until today, maintaining a base registry comes with extra maintenance costs to create the dataset and keep it up to date.
         We study the possibility to entangle the maintenance of base registries at the core of existing administrative processes, to reduce the cost of maintaining a new data source.
         In this paper, we demo a way to manage local decisions as linked data which creates a new base registry for mandates.
         We found that no extra effort was needed in the process by local administrations.
         We show that an end-to-end approach for Local Decisions as Linked Data is feasible.
-        Furthermore, we obtained political leverage to implement the ideas behind this PoC and roll it out for the region of Flanders in Belgium.
+        Furthermore, using this proof of concept, we established a political momentum to roll out these ideas for the region of Flanders in Belgium.
       </p>
     </section>
     <!-- Sections -->
@@ -81,8 +121,8 @@
     </section>
     <section id="sec_relwork">
       <h1>Related work</h1>
-      <p>Within European policies today, there is on-going work towards base registries, trusted datasets, authoritative sources and appointing responsible parties to collect certain information.
-
+      <p>Within European policies today, there is on-going work towards base registries, trusted datasets, authoritative sources and appointing responsible parties to collect certain information.</p>
+      <p>
 A base registry (BR) is a trusted authentic source of information under the control of an appointed public administration or organisation appointed by government [1]
 trusted means that the local government is managing the local council decisions conformant to best practices in all EIF-domains [2], more specific at the level of semantic and organizational interoperability  and conformant to legal requirements  (Flemish Decree *?). On the semantic level we’ve defined a vocabulary for council decisions and the organizational level and we’ve organized working groups with the local and regional governments, where they have agreed on decentralized processes which provide data to the base registry, using the principles of linked data.
 authentic means that this is considered to be THE source of information which represents the correct status and which kept constantly up-to-date and is of highest possible quality. This is archieved by avoiding public servants to copy the information into a separated form or application. When the registered data is part of the core processes of the local administrations and used in their own information systems, we expect this will improve the quality.
@@ -92,20 +132,34 @@ appointed means: that the governing administration, the Flemish Agency for Domes
 
     <section id="sec_tools">
       <h1>Method and implementation</h1>
-      <p>We interviewed X service providers for their stance on Linked Data, interviewed Y local governments on how they register and publish local council decisions. We also organized 3 workshops which formed the input for a software engineer to create a proof of concept.
- 
-The domain concepts were formalized into two Linked Data vocabularies: one for the metadata and one for describing public mandates. The proof of consists of 5 components: an editor for local decisions, an HTML-page publishing service responsible for URI dereferencing, a crawler for local decisions and 2 reuse examples on top of the harvested data.</p>
+      <p>We interviewed X service providers for their stance on Linked Data, interviewed Y local governments on how they register and publish local council decisions. We also organized 3 workshops which formed the input for a software engineer to create a proof of concept.</p>
+      <p>The domain concepts were formalized into two Linked Data vocabularies: one for the metadata and one for describing public mandates. The proof of consists of 5 components: an editor for local decisions, an HTML-page publishing service responsible for URI dereferencing, a crawler for local decisions and 2 reuse examples on top of the harvested data.</p>
+      <todo>insert models here</todo>
     </section>
     
     <section id="sec_demo">
       <h1>Demo</h1>
-      <p></p>
-    </section>
+      <p>In this demo ...</p>
+      <!--TODO: this is stub text-->
+      <h2>The editor</h2>
+      <p>We have introduced a virtual local government called Vlavirgem for which we can publish local decisions. The editor at <a href="https://lblod.github.io/editor">lblod.github.io/editor</a> is a proof of concept of such an editor, which reuses existing base registries. You can choose to fill out a certain template for decisions that occur often, such as the resignation of a local counselor or the installation of a new one. When filling out the necessary fields, the editor will help you to fill out the necessary fields: indeed, only the people that are currently in office can resign. When finished, you will still be able to edit the official document, which contains more information such as links to legal background, context and motivation, and a category.</p>
 
-    <div id="example">
-      <ul id="list">
-      </ul>
-    </div>
+      <p>When the decision is ready for publishing, <todo>TODO</todo></p>
+
+      <p>At any time in the editor, you can click the JSON-LD button, which will show you the machine-readable data you have so far entered.</p>
+
+      <h2>The harvester</h2>
+      
+      <h2>Example reuse</h2>
+      <p>We can imagine this data being </p>
+      
+      <div id="example" class="no-print">
+        <h3>Demo: Council of Vlavirgem</h3>
+        <p>When everything went right, you should be able to see the list of local representatives down here. If you do not believe that someone is a local representative in your city's council, you can click the "Oh yeah?" button, which will link you to the official publication of the local decision.</p>
+        <ul id="list">
+        </ul>
+      </div>
+    </section>
     
     <section id="sec_conclusion">
       <h1>Conclusion</h1>
@@ -147,7 +201,7 @@ The domain concepts were formalized into two Linked Data vocabularies: one for t
           "xsd": "http://www.w3.org/2001/XMLSchema#"
         },
         "@graph" : [
-          { "@type": "lbld:Decision", "schema:event" : { "lbld:organization" : "http://vlavirgem.pieter.pm/#gemeenteraad" } } 
+          { "@type": "mandaat:Mandate"} //, "schema:event" : { "lbld:organization" : "http://vlavirgem.pieter.pm/#gemeenteraad" } } 
         ]
       }
       $.getJSON('http://linkeddatatestagiv.cloudapp.net/poc/decisions.jsonld?limit=100000').success(function(data) {
@@ -159,11 +213,7 @@ The domain concepts were formalized into two Linked Data vocabularies: one for t
       console.log(decisions);
       var html = '';
       for (var i = 0; i < decisions["@graph"].length; i++) {
-        var bbc = '';
-        if (decisions["@graph"][i]["lbld:bbcCode"]) {
-            bbc = '<span class="badge">' + decisions["@graph"][i]["lbld:bbcCode"] + '</span>';
-        }
-        html += '<li class="list-group-item"><a href="' + decisions["@graph"][i]["@id"] + '" target="_blank">' + decisions["@graph"][i]["dcterms:title"] + '</a> ' + bbc + '</li>';
+        html += '<li class="list-group-item"><a href="' + decisions["@graph"][i]["@id"] + '" target="_blank">' + decisions["@graph"][i]["mandaat:person"]["schema:name"] + '</a></li>';
       }
       $('#list').html(html);
     });
