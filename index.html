@@ -26,7 +26,7 @@
     <!-- /END Visualisation requirements (mandatory for optimal reading) -->
     
     <!-- Metadata -->
-    <title about="#" property="dcterms:title">Local Decisions as Linked Data: a proof of concept</title>
+    <title about="#" property="dcterms:title">Local Council Decisions as Linked Data: a proof of concept</title>
     
     <!-- Author's data (one or more) -->
     <meta about="#buyle" typeof="schema:Person" name="dc.creator" property="schema:name" content="Raf Buyle"/>
@@ -61,7 +61,7 @@
     <meta about="http://datasciencelab.ugent.be/#organization" property="schema:name" typeof="schema:Organization" content="Data Science Lab - iMinds - Ghent University"/>
     <meta about="http://mict.ugent.be/#organization" property="schema:name" typeof="schema:Organization" content="MICT - iMinds - Ghent University"/>
     <meta about="http://informatie.vlaanderen/#id" property="schema:name" typeof="schema:Organization" content="Flemish Information Agency"/>
-    <meta about="http://lokaalbestuur.vlaanderen.be/#id" property="schema:name" typeof="schema:Organization" content="Flemish Agency for Domestic Governnce"/>
+    <meta about="http://lokaalbestuur.vlaanderen.be/#id" property="schema:name" typeof="schema:Organization" content="Flemish Agency for Domestic Governance"/>
     
     <!-- Paper keywords (one or more) -->
     <meta about="#" property="prism:keyword" content="Linked Data"/>
@@ -99,13 +99,11 @@
     <section role="doc-abstract">
       <h1>Abstract</h1>
       <p>
-        <i>Base registries are trusted authentic sources of information under the control of an appointed public administration or organisation appointed by government</i><mark>how to add a quote? http://ec.europa.eu/isa/actions/documents/isa_1.2_d1.2_base_registry_definition.pdf</mark>.
-        Until today, maintaining a base registry comes with extra maintenance costs to create the dataset and keep it up to date.
+        <i>Base registries are trusted authentic sources of information under the control of an appointed public administration or organisation appointed by government</i> [1].
+        Maintaining a base registry comes with extra maintenance costs to create the dataset and keep it up to date.
         We study the possibility to entangle the maintenance of base registries at the core of existing administrative processes, to reduce the cost of maintaining a new data source.
-        In this paper, we demo a way to manage local decisions as linked data which creates a new base registry for mandates.
-        We found that no extra effort was needed in the process by local administrations.<mark>dit moeten we een beetje nuanceren</mark>
-        We show that an end-to-end approach for Local Decisions as Linked Data is feasible.
-        Furthermore, using this proof of concept, we established a political momentum to roll out these ideas for the region of Flanders in Belgium.
+        In this paper, we demo a way to manage local council decisions as linked data which creates a new base registry for mandates.
+        We found that no extra effort was needed in the process by local administrations. We show that an end-to-end approach for Local Decisions as Linked Data is feasible. Furthermore, using this proof of concept, we established a political momentum to roll out these ideas for the region of Flanders in Belgium.
       </p>
     </section>
     <!-- Sections -->
@@ -123,11 +121,10 @@
       <h1>Related work</h1>
       <p>Within European policies today, there is on-going work towards base registries, trusted datasets, authoritative sources and appointing responsible parties to collect certain information.</p>
       <p>
-A base registry (BR) is a trusted authentic source of information under the control of an appointed public administration or organisation appointed by government [1]
-trusted means that the local government is managing the local council decisions conformant to best practices in all EIF-domains [2], more specific at the level of semantic and organizational interoperability  and conformant to legal requirements  (Flemish Decree *?). On the semantic level we’ve defined a vocabulary for council decisions and the organizational level and we’ve organized working groups with the local and regional governments, where they have agreed on decentralized processes which provide data to the base registry, using the principles of linked data.
-authentic means that this is considered to be THE source of information which represents the correct status and which kept constantly up-to-date and is of highest possible quality. This is archieved by avoiding public servants to copy the information into a separated form or application. When the registered data is part of the core processes of the local administrations and used in their own information systems, we expect this will improve the quality.
-under control means that all measures have been taken that only parties that have a necessity & finality & authorisation can access the information in proportionality with their needs. (nope,   the POC we’ve focused on data not under privacy regulations)
-appointed means: that the governing administration, the Flemish Agency for Domestic Governance, has a legal basis to collect and maintain the respective information.</p>
+        <i>A base registry (BR) is a <b>trusted</b> <b>authentic</b> source of information under the control of an appointed public administration or organisation <b>appointed</b> by government</i> [1]. 
+        <b>Trusted</b> means that, in this case, the local government is managing the local council decisions conformant to best practices in all EIF-domains [2], more specific at the level of semantic and organizational interoperability  and conformant to legal requirements  (Flemish Decree *?). On the semantic level we’ve defined a vocabulary for council decisions and at the organizational level  we’ve organized working groups with experts from local and regional governments, where they have agreed on decentralized processes which provide data to the base registry, in line with the principles of linked data.
+        <b>Authentic</b> means that this is considered to be 'the' source of information which represents the correct status and which kept constantly up-to-date and is of highest possible quality. This is archieved by avoiding to copy the information manually into a separated form or application. When the registered data is part of the core processes of the local administrations and used in their own information systems, we expect this will improve the quality.
+        <b>appointed</b> means: that the governing administration, the Flemish Agency for Domestic Governance, has a legal basis to collect and maintain the respective information. <mark>[???????]</mark></p>
     </section>
 
     <section id="sec_tools">
