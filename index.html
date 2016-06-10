@@ -103,7 +103,6 @@
         Maintaining a base registry comes with extra maintenance costs to create the dataset and keep it up to date.
         We study the possibility to entangle the maintenance of base registries at the core of existing administrative processes, to reduce the cost of maintaining a new data source.
         In this paper, we demo a way to manage local council decisions as linked data which creates a new base registry for mandates.
-        We found that no extra effort was needed in the process by local administrations. We show that an end-to-end approach for Local Decisions as Linked Data is feasible. Furthermore, using this proof of concept, we established a political momentum to roll out these ideas for the region of Flanders in Belgium.
       </p>
     </section>
     <!-- Sections -->
@@ -123,8 +122,9 @@
       <p>
         <i>A base registry (BR) is a <b>trusted</b> <b>authentic</b> source of information under the control of an appointed public administration or organisation <b>appointed</b> by government</i> [1]. 
         <b>Trusted</b> means that, in this case, the local government is managing the local council decisions conformant to best practices in all EIF-domains [2], more specific at the level of semantic and organizational interoperability  and conformant to legal requirements  (Flemish Decree *?). On the semantic level we’ve defined a vocabulary for council decisions and at the organizational level  we’ve organized working groups with experts from local and regional governments, where they have agreed on decentralized processes which provide data to the base registry, in line with the principles of linked data.
+        <b>Trusted</b> means that, in this case, the local government is managing the local council decisions conformant to best practices in all EIF-domains [2], more specific at the level of semantic and organizational interoperability  and conformant to legal requirements in the Municipal Decree [3]. On the semantic level we’ve defined a vocabulary for council decisions and at the organizational level  we’ve organized working groups with experts from local and regional governments, where they have agreed on decentralized processes which provide data to the base registry, in line with the principles of linked data.
         <b>Authentic</b> means that this is considered to be 'the' source of information which represents the correct status and which kept constantly up-to-date and is of highest possible quality. This is archieved by avoiding to copy the information manually into a separated form or application. When the registered data is part of the core processes of the local administrations and used in their own information systems, we expect this will improve the quality.
-        <b>appointed</b> means: that the governing administration, the Flemish Agency for Domestic Governance, has a legal basis to collect and maintain the respective information. <mark>[???????]</mark></p>
+        <b>appointed</b> means: that the governing administration, the Flemish Agency for Domestic Governance, has a legal basis to collect and maintain the respective information.</p>
     </section>
 
     <section id="sec_tools">
@@ -160,7 +160,22 @@
     
     <section id="sec_conclusion">
       <h1>Conclusion</h1>
-      <p>The insights from the interviews are showing that, when registering council data is embedded in the core processes and information systems of the local administrations, the quality will improve, as evidenced by ...,. The proof of concept shows that an end-to-end approach, based on the developed linked data method, is reachable. The pilot and these insights created a political basis to build a base registry for local council decisions in line with the best practices of this study.</p>
+      <p>
+        <mark>TODO Raf: Vlengels herschrijven</mark>
+        Although local council decisions contain authentic and qualitative information in the form of non gestructureerdde text, we've learned that the information 
+        in the authoritative source for local mandates, which is filled in manually by local governments, often is lagging and not qualitative.
+        <br/>
+        Other studies <mark>referentie opnemen</mark> (confirm that when information is collected too far from the source, or the ? inwinning ? is independent of the core processes,
+        this has a negative impact on the quality of the authoritative sources of information.
+        <br/>              
+        The interviews with local governments taught us that when information from local decisions (eg appointing a ? mandataris?) could be transformed into a structured
+        way, this not only will reduce the workload caused by external reporting (regional government, re-use by the private sector), but also will increase the internal reuse of this information (eg. to publish local representatives on the website or register in the back-office systems for managign personal.
+        <br/>     
+        The proof of concept shows that (I) an end-to-end approach, based on the developed linked data method, is reachable and the process of making decisions will be more efficient:
+       There os less manual work, governments may seek easier in regulation, the linked data allows easy to do an impact analysis when legislation is amended.
+        (II) We notice a quality gain in layout thanks Correct legal references (also own decisions) and the use of Sound factual data (eg. Linked addresses)
+        (III) Finally, we lakes Efficiency gains in a publication of the decisions that flow automatically through this methodology to their own website, the codex and without additional efforts are suitable for reuse by third parties (open data). The pilot and these insights created a political basis to build a base registry for local council decisions in line with the best practices of this study.
+      </p>
     </section>
     
     <!-- References -->
@@ -170,6 +185,7 @@
         <li id="shotton-sempub" about="c:shotton-sempub-expression" typeof="fabio:JournalArticle" property="frbr:realizationOf" resource="c:shotton-sempub-work" role="doc-biblioentry"><p about="c:shotton-sempub-expression" property="dcterms:bibliographicCitation">Shotton, D., Portwin, K., Klyne, G., &amp; Miles, A. (2009). Adventures in Semantic Publishing: Exemplar Semantic Enhancements of a Research Article. PLoS Computational Biology, 5(4): e1000361. <a about="c:shotton-sempub-work" typeof="fabio:ResearchPaper" href="http://dx.doi.org/10.1371/journal.pcbi.1000361">http://dx.doi.org/<span about="c:shotton-sempub-expression" property="prism:doi">10.1371/journal.pcbi.1000361</span></a></p></li>
         <li>Base registry definition: http://ec.europa.eu/isa/actions/documents/isa_1.2_d1.2_base_registry_definition.pdf</li>
         <li>http://ec.europa.eu/isa/documents/isa_annex_ii_eif_en.pdf (p21)</li>
+        <li>Municipal Decree:  http://codex.vlaanderen.be/Portals/Codex/documenten/1013949.html</li>
       </ol>
     </section>
     
