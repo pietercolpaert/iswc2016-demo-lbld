@@ -99,7 +99,7 @@
     <section role="doc-abstract">
       <h1>Abstract</h1>
       <p>
-        <i>Base registries are trusted authentic sources of information under the control of an appointed public administration or organisation appointed by government</i> [1].
+        Base registries are trusted authentic sources of information under the control of an appointed public administration or organisation appointed by government.
         Maintaining a base registry comes with extra maintenance costs to create the dataset and keep it up to date.
         We study the possibility to entangle the maintenance of base registries at the core of existing administrative processes, to reduce the cost of maintaining a new data source.
         In this paper, we demo a way to manage local council decisions as linked data which creates a new base registry for mandates.
@@ -121,10 +121,10 @@
       <h1>Related work</h1>
       <p>Within European policies today, there is on-going work towards base registries, trusted datasets, authoritative sources and appointing responsible parties to collect certain information.</p>
       <p>
-        <i>A base registry (BR) is a <b>trusted</b> <b>authentic</b> source of information under the control of an appointed public administration or organisation <b>appointed</b> by government</i> [1]. 
-        <b>Trusted</b> means that, in this case, the local government is managing the local council decisions conformant to best practices in all EIF-domains [2], more specific at the level of semantic and organizational interoperability  and conformant to legal requirements in the Municipal Decree [3]. On the semantic level we’ve defined a vocabulary for council decisions and at the organizational level  we’ve organized working groups with experts from local and regional governments, where they have agreed on decentralized processes which provide data to the base registry, in line with the principles of linked data.
-        <b>Authentic</b> means that this is considered to be 'the' source of information which represents the correct status and which kept constantly up-to-date and is of highest possible quality. This is archieved by avoiding to copy the information manually into a separated form or application. When the registered data is part of the core processes of the local administrations and used in their own information systems, we expect this will improve the quality.
-        <b>appointed</b> means: that the governing administration, the Flemish Agency for Domestic Governance, has a legal basis to collect and maintain the respective information.</p>
+        The European Commission defines a base registry (BR) as a <strong>trusted</strong> <strong>authentic</strong> source of information under the control of an appointed public administration or organisation <strong>appointed</strong> by government [1]. 
+        <strong>Trusted</strong> means that, in this case, the local government is managing the local council decisions conformant to best practices in all EIF-domains [2], more specific at the level of semantic and organizational interoperability  and conformant to legal requirements in the Municipal Decree [3]. On the semantic level we’ve defined a vocabulary for council decisions and at the organizational level  we’ve organized working groups with experts from local and regional governments, where they have agreed on decentralized processes which provide data to the base registry, in line with the principles of linked data.
+        <strong>Authentic</strong> means that this is considered to be 'the' source of information which represents the correct status and which kept constantly up-to-date and is of highest possible quality. This is archieved by avoiding to copy the information manually into a separated form or application. When the registered data is part of the core processes of the local administrations and used in their own information systems, we expect this will improve the quality.
+        <strong>Appointed</strong> means: that the governing administration, the Flemish Agency for Domestic Governance, has a legal basis to collect and maintain the respective information.</p>
     </section>
 
     <section id="sec_tools">
@@ -136,7 +136,11 @@
     
     <section id="sec_demo">
       <h1>Demo</h1>
-      <p>In this demo ...</p>
+      <p>
+        In this demo we show 3 components: one component is able to generate a document describing a local council decision and publish it.
+        Another component is able to harvest the Linked Open Data available within these documents.
+        Finally, we have created a couple of reuse examples on top of the harvested data, which would be able to replace existing databases within Flanders.
+      </p>
       <!--TODO: this is stub text-->
       <h2>The editor</h2>
       <p>We have introduced a virtual local government called Vlavirgem for which we can publish local decisions. The editor at <a href="https://lblod.github.io/editor">lblod.github.io/editor</a> is a proof of concept of such an editor, which reuses existing base registries. You can choose to fill out a certain template for decisions that occur often, such as the resignation of a local counselor or the installation of a new one. When filling out the necessary fields, the editor will help you to fill out the necessary fields: indeed, only the people that are currently in office can resign. When finished, you will still be able to edit the official document, which contains more information such as links to legal background, context and motivation, and a category.</p>
