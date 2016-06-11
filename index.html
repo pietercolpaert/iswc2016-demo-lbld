@@ -111,7 +111,7 @@
       <h1>Introduction</h1>
       <p>
         Councils are empowered by law, to make decisions on many matters of importance to their local communities.
-        Decisions are made in formally constituted council meetings. Local government data, digitizing these decisions, is locked in data silo's and therefore manually registered  in the authorative data source of the regional government. Imagine a smart city where public decision-making is easy for all to follow using any digital channel. s.a. "the effects of local tax policy" or an insight in "the public procurement".
+        Decisions are made in formally constituted council meetings. Local government data, digitizing these decisions, is locked in data silo's and therefore manually registered  in the authorative data source of the regional government. Imagine a smart city where public decision-making is easy for all to follow using any digital channel. s.a. “the effects of local tax policy” or an insight in “the public procurement”.
       </p>
       <p>
         This pilot is a stepstone in the transition of the  Flemish Agency for Domestic Governance  towards an administration with a greater focus on policy development in terms of better administrative processes.
@@ -129,9 +129,13 @@
 
     <section id="sec_tools">
       <h1>Method and implementation</h1>
-      <p>We interviewed X service providers for their stance on Linked Data, interviewed Y local governments on how they register and publish local council decisions. We also organized 3 workshops which formed the input for a software engineer to create a proof of concept.</p>
-      <p>The domain concepts were formalized into two Linked Data vocabularies: one for the metadata and one for describing public mandates. The proof of consists of 5 components: an editor for local decisions, an HTML-page publishing service responsible for URI dereferencing, a crawler for local decisions and 2 reuse examples on top of the harvested data.</p>
-      <todo>insert models here</todo>
+      <p>We interviewed 10 service providers for their stance on Linked Data, interviewed 31 local governments on how they register and publish local council decisions.
+        We also organized 3 workshops which formulated the input for the proof of concept: two workshops were organized for creating a preliminary domain model, and 1 workshop was organized to create wireframes on how local council decisions would be created and searched through in an ideal scenario.</p>
+      <p>The domain concepts were formalized into two Linked Data vocabularies: one for the metadata and one for describing public mandates.
+        The proof of consists of 5 components: an editor for local decisions, an HTML-page publishing service responsible for URI dereferencing, a crawler for local decisions and 2 reuse examples on top of the harvested data.</p>
+      <p>
+        The models are available at <a href="https://lblod.github.io/vocabulary">https://lblod.github.io/vocabulary</a>
+      </p>
     </section>
     
     <section id="sec_demo">
@@ -150,6 +154,10 @@
       <p>At any time in the editor, you can click the JSON-LD button, which will show you the machine-readable data you have so far entered.</p>
 
       <h2>The harvester</h2>
+      <p>
+        A harvester is set up using The DataTank<footnote><a href="http://thedatatank.com">http://thedatatank.com</a> - an open-source project to (re)publish data over HTTP</footnote>.
+        By configuring a "rich snippets" harvester, HTML files are parsed and some links are 
+      </p>
       
       <h2>Example reuse</h2>
       <p>We can imagine this data being </p>
