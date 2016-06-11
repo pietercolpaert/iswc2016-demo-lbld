@@ -109,16 +109,19 @@
     <!-- Sections -->
     <section id="sec_introduction">
       <h1>Introduction</h1>
-      <p>
+      <p><pc>this paragraph can be better focused and should introduce the current problem of maintaining base registries</pc>
         Councils are empowered by law, to make decisions on many matters of importance to their local communities.
-        Decisions are made in formally constituted council meetings. Local government data, digitizing these decisions, is locked in data silo's and therefore manually registered  in the authorative data source of the regional government. Imagine a smart city where public decision-making is easy for all to follow using any digital channel. s.a. “the effects of local tax policy” or an insight in “the public procurement”.
+        Decisions are made in formally constituted council meetings.
+        Local government data, digitizing these decisions, is locked in data silos and therefore manually registered  in the authorative data source of the regional government.
+        Imagine a smart city where public decision-making is easy for all to follow using any digital channel. s.a. “the effects of local tax policy” or an insight in “the public procurement”.
       </p>
       <p>
-        This pilot is a stepstone in the transition of the  Flemish Agency for Domestic Governance  towards an administration with a greater focus on policy development in terms of better administrative processes.
+        A study <mark><a href="http://steunpuntbov.be/rapport/SBOV%20Van%20Cauter%20Snoeck%20Crompvoets%20Voets_%20SBOV%20rapport%20Verkeersbordendatabank%20een%20bestuurskundige%20analyse.pdf">Lies VAN CAUTER - SBOV evidence?</a> of <a href="http://www.igi-global.com/article/when-innovation-stumbles/143029">Flemish Road Sign Database Project</a></mark> [4] confirm that when information is collected too far from the source, or the data collection is seperated from the core processes, this has a negative impact on the quality of the authoritative sources of information.
+        In this paper, we study applying Linked Data technologies and publish data as Linked Open Data as close as possible to the authoritative source.
       </p>
     </section>
-    <section id="sec_relwork">
-      <h1>Related work</h1>
+    <section id="sec_sota">
+      <h1>State of the art</h1>
       <p>Within European policies today, there is on-going work towards base registries, trusted datasets, authoritative sources and appointing responsible parties to collect certain information.</p>
       <p>
         The European Commission defines a base registry (BR) as a <strong>trusted</strong> <strong>authentic</strong> source of information under the control of an appointed public administration or organisation <strong>appointed</strong> by government [1]. 
@@ -156,17 +159,24 @@
       <h2>The harvester</h2>
       <p>
         A harvester is set up using The DataTank<footnote><a href="http://thedatatank.com">http://thedatatank.com</a> - an open-source project to (re)publish data over HTTP</footnote>.
-        By configuring a "rich snippets" harvester, HTML files are parsed and some links are 
+        By configuring a rich snippets harvester, HTML files are parsed and some links are followed to download more files which can be parsed.
+        The extracted triples are stored in a triple store and again exposed through prepared sparql queries <pc>todo: cite Basilar and The DataTank paper here?</pc>.
       </p>
       
       <h2>Example reuse</h2>
-      <p>We can imagine this data being </p>
+      <todo>Pieter: write this</todo>
+      <p>We can imagine this data being a great start for... At X and Y you can see two reuse demos. The first for generating an automatic list of ... The second is a list of... We can imagine other types of reuse as well, which were brainstormed during the workshop: a map showing decisions near you, a database for traffic signs based on local decisions, a <todo>more examples</todo></p>
       
       <div id="example" class="no-print">
         <h3>Demo: Council of Vlavirgem</h3>
         <p>When everything went right, you should be able to see the list of local representatives down here. If you do not believe that someone is a local representative in your city's council, you can click the "Oh yeah?" button, which will link you to the official publication of the local decision.</p>
         <ul id="list">
         </ul>
+      </div>
+      
+      <div id="example2" class="no-print">
+        <h3>Demo: Local codex for Flanders</h3>
+        <p><todo>Local codex demo</todo></p>
       </div>
     </section>
     
@@ -175,15 +185,18 @@
       <p>
         Although local council decisions contain authentic and qualitative information in the form of non-structured information, the information 
         in the authoritative source for local mandates (one of the use cases of local council decisions) which is still filled in manually by local governments is lagging and not qualitative.
-        <br/>
-        Other studies <mark><a href="http://steunpuntbov.be/rapport/SBOV%20Van%20Cauter%20Snoeck%20Crompvoets%20Voets_%20SBOV%20rapport%20Verkeersbordendatabank%20een%20bestuurskundige%20analyse.pdf">Lies VAN CAUTER - SBOV evidence?</a> of <a href="http://www.igi-global.com/article/when-innovation-stumbles/143029">Flemish Road Sign Database Project - GEEN TOEGANG - evidence?</a></mark> [4] confirm that when information is collected too far from the source, or the data collection is seperated from the core processes, this has a negative impact on the quality of the authoritative sources of information.
-        <br/>              
+      </p>
+      <p>              
         <bold>The interviews with local governments</bold> indicated that information from local decisions (eg appointing a representative) could be transformed into a structured way, this will reduce the workload caused by reporting to external partners (regional government, re-use by the private sector) and also will increase the internal reuse of this information (eg. to publish local representatives on the website or register in the back-office systems for managing their loans.
-        <br/>     
+      </p>
+      <p>
         <bold>The proof of concept</bold> shows that (I) an end-to-end approach, based on the developed linked data method, is reachable and the process of making decisions will be more efficient: less manual work, governments may seek easier in regulation, the linked data allows easy to do an impact analysis when legislation is amended.
         (II) We notice a quality gain in editing due to correct legal references (even referencing to decisions of their own municipality) and the use of qualitative factual data (eg. Addresses linked to the Central Reference Address Database, a regional base registry)
-        (III) Finally, there are also efficiency gains in the publication of the decisions that are automatically published on the website of the local government, in the the codex and without additional efforts  suitable for reuse by third parties (Open Data). <br/> The pilot and these insights created a political basis to build a base registry for local council decisions in line with the best practices of this study.       
-        
+        (III) Finally, there are also efficiency gains in the publication of the decisions that are automatically published on the website of the local government, in the the codex and without additional efforts  suitable for reuse by third parties (Open Data).
+      </p>
+      <p>
+        The insights created a political basis to build a base registry for local council decisions in line with the best practices of this study.
+        This project, funded by the Flemish Agency for Domestic Governance, is a stepstone in the transition of the Flemish Government towards an administration with a greater focus on policy development in terms of better administrative processes.
       </p>
     </section>
     
