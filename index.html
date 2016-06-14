@@ -101,8 +101,8 @@
       <p>
         Base registries are trusted authentic information sources controlled by an appointed public administration or organisation appointed by government.
         Maintaining a base registry comes with extra maintenance costs to create the dataset and keep it up to date.
-        We study the possibility to entangle the maintenance of base registries at the core of existing administrative processes, to reduce the cost of maintaining a new data source.
-        In this paper, we demo a way to manage local council decisions as linked data which creates a new base registry for mandates.
+        In this paper, we study the possibility to entangle the maintenance of base registries at the core of existing administrative processes and to reduce the cost of maintaining a new data source.
+        We demonstrate a method to manage Local Council Decisions as Linked Data which creates a new base registry for mandates.
         We found that no extra effort was needed in the process by local administrations. We show that an end-to-end approach for Local Council Decisions as Linked Data is feasible. Furthermore, using this proof of concept, we established a  momentum to roll out these ideas for the region of Flanders in Belgium.
       </p>
     </section>
@@ -110,47 +110,51 @@
     <section id="sec_introduction">
       <h1>Introduction</h1>
       <p><pc>this paragraph can be better focused and should introduce the current problem of maintaining base registries</pc>
-        Councils are empowered by law, to make decisions on many matters of importance to their local communities.
+        Local councils are empowered by law, to make decisions on many matters of importance to their local communities.
         Decisions are made in formally constituted council meetings.
         Local government data, digitizing these decisions, is locked in data silos and therefore manually registered  in the authorative data source of the regional government.
         Imagine a smart city where public decision-making is easy for all to follow using any digital channel. s.a. “the effects of local tax policy” or an insight in “the public procurement”.
       </p>
       <p>
-        A study <mark><a href="http://steunpuntbov.be/rapport/SBOV%20Van%20Cauter%20Snoeck%20Crompvoets%20Voets_%20SBOV%20rapport%20Verkeersbordendatabank%20een%20bestuurskundige%20analyse.pdf">Lies VAN CAUTER - SBOV evidence?</a> of <a href="http://www.igi-global.com/article/when-innovation-stumbles/143029">Flemish Road Sign Database Project</a></mark> [4] confirm that when information is collected too far from the source, or the data collection is seperated from the core processes, this has a negative impact on the quality of the authoritative sources of information.
+        A study <mark><a href="http://steunpuntbov.be/rapport/SBOV%20Van%20Cauter%20Snoeck%20Crompvoets%20Voets_%20SBOV%20rapport%20Verkeersbordendatabank%20een%20bestuurskundige%20analyse.pdf">Lies VAN CAUTER - SBOV evidence?</a> of <a href="http://www.igi-global.com/article/when-innovation-stumbles/143029">Flemish Road Sign Database Project</a></mark> [4] confirms that when information is collected too far from the source, or the data collection is seperated from the core processes, this has a negative impact on the quality of the authoritative sources of information.
         In this paper, we study applying Linked Data technologies and publish data as Linked Open Data as close as possible to the authoritative source.
       </p>
     </section>
     <section id="sec_sota">
       <h1>State of the art</h1>
-      <p>Within European policies today, there is on-going work towards base registries, trusted datasets, authoritative sources and appointing responsible parties to collect certain information.</p>
+      <p>Today, European policies emphasize working on base registries, trusted datasets, authoritative sources and appoint responsible parties to collect certain information.</p>
       <p>
         The European Commission defines a base registry (BR) as a <strong>trusted</strong> <strong>authentic</strong> source of information under the control of an appointed public administration or organisation <strong>appointed</strong> by government [1]. 
-        <strong>Trusted</strong> means that, in this case, the local government is managing the local council decisions conformant to best practices in all EIF-domains [2], more specific at the level of semantic and organizational interoperability  and conformant to legal requirements in the Municipal Decree [3]. On the semantic level we’ve defined a vocabulary for council decisions and at the organizational level  we’ve organized working groups with experts from local and regional governments, where they have agreed on decentralized processes which provide data to the base registry, in line with the principles of linked data.
-        <strong>Authentic</strong> means that this is considered to be 'the' source of information which represents the correct status and which kept constantly up-to-date and is of highest possible quality. This is archieved by avoiding to copy the information manually into a separated form or application. When the registered data is part of the core processes of the local administrations and used in their own information systems, we expect this will improve the quality.
-        <strong>Appointed</strong> means: that the governing administration, the Flemish Agency for Domestic Governance, has a legal basis to collect and maintain the respective information.</p>
+        <strong>Trusted</strong> means that, in this case, the local government is managing the Local Council Decisions conformant to best practices in all European Interoperability Framework-domains [2], more specific at the level of semantic and organizational interoperability  and conformant to legal requirements in the Municipal Decree [3]. On a semantic level we have defined a vocabulary for council decisions. At the organizational level we have organized working groups with experts from local and regional governments, where they have agreed on decentralized processes which provide data to the base registry, in line with the principles of Linked Data.
+        <strong>Authentic</strong> means that this is considered to be 'the' source of information which represents the correct status and which is kept constantly up-to-date and is of highest possible quality. This is achieved by avoiding copying information manually into a separate form or application. When the registered data is part of the core processes of the local administrations and used in their own information systems, we expect this will improve the quality.
+        <strong>Appointed</strong> means that the governing administration, the Flemish Agency for Domestic Governance, has a legal basis to collect and maintain the respective information.</p>
     </section>
 
     <section id="sec_tools">
       <h1>Method and implementation</h1>
-      <p>We interviewed 10 service providers for their stance on Linked Data, interviewed 31 local governments on how they register and publish local council decisions.
-        We also organized 3 workshops which formulated the input for the proof of concept: two workshops were organized for creating a preliminary domain model, and 1 workshop was organized to create wireframes on how local council decisions would be created and searched through in an ideal scenario.</p>
+      <p>We interviewed 10 ICT service providers for their stance on Linked Data and interviewed 31 local governments on how they register and publish Local Council Decisions.
+        We also organized 3 workshops which formulated the input for the proof of concept: two workshops were organized for creating a preliminary domain model, and 1 workshop was organized to create wireframes on how Local Council Decisions would be created and searched through in an ideal scenario.</p>
       <p>The domain concepts were formalized into two Linked Data vocabularies: one for the metadata and one for describing public mandates.
-        The proof of consists of 5 components: an editor for local decisions, an HTML-page publishing service responsible for URI dereferencing, a crawler for local decisions and 2 reuse examples on top of the harvested data.</p>
+        The proof of concept consists of 5 components:
+			<ul><li>an editor for local decisions</li>
+			<li>a HTML-page publishing service responsible for URI dereferencing</li>
+			<li>a crawler for local decisions</li>
+			<li>2 reuse examples on top of the harvested data.</li></ul></p>
       <p>
-        The models are available at <a href="https://lblod.github.io/vocabulary">https://lblod.github.io/vocabulary</a>
+        The models are available at <a href="https://lblod.github.io/vocabulary">https://lblod.github.io/vocabulary.</a>
       </p>
     </section>
     
     <section id="sec_demo">
       <h1>Demo</h1>
       <p>
-        In this demo we show 3 components: one component is able to generate a document describing a local council decision and publish it.
+        In this demo we show 3 components: one component generates a document describing a Local Council Decision and publishes it.
         Another component is able to harvest the Linked Open Data available within these documents.
-        Finally, we have created a couple of reuse examples on top of the harvested data, which would be able to replace existing databases within Flanders.
+        Finally, we also created two reuse examples on top of the harvested data, which would be able to replace existing databases in the Flemish administration.
       </p>
       <!--TODO: this is stub text-->
       <h2>The editor</h2>
-      <p>We have introduced a virtual local government called Vlavirgem for which we can publish local decisions. The editor at <a href="https://lblod.github.io/editor">lblod.github.io/editor</a> is a proof of concept of such an editor, which reuses existing base registries. You can choose to fill out a certain template for decisions that occur often, such as the resignation of a local counselor or the installation of a new one. When filling out the necessary fields, the editor will help you to fill out the necessary fields: indeed, only the people that are currently in office can resign. When finished, you will still be able to edit the official document, which contains more information such as links to legal background, context and motivation, and a category.</p>
+      <p>We have introduced a virtual local government called Vlavirgem for which we can publish local decisions. The editor at <a href="https://lblod.github.io/editor">lblod.github.io/editor</a> is a proof of concept of such an editor, which reuses existing base registries. You can choose to fill out a certain template for decisions that occur often, such as the resignation of a local counselor or the installation of a new one. When filling out the necessary fields, the editor will help you to fill out the necessary fields (e.g. the editor will only suggest people that are currently in office when creating a decision on the resignation of a local counselor). When finished, you will still be able to edit the official document, which contains more information such as links to legal background, context and motivation, and a category.</p>
 
       <p>When the decision is ready for publishing, <todo>TODO</todo></p>
 
@@ -165,7 +169,7 @@
       
       <h2>Example reuse</h2>
       <todo>Pieter: write this</todo>
-      <p>We can imagine this data being a great start for... At X and Y you can see two reuse demos. The first for generating an automatic list of ... The second is a list of... We can imagine other types of reuse as well, which were brainstormed during the workshop: a map showing decisions near you, a database for traffic signs based on local decisions, a <todo>more examples</todo></p>
+      <p>We can imagine this data being a great start for... At X and Y you can see two reuse demos. The first for generating an automatic list of ... The second is a list of... We can imagine other types of reuse as well, which were brainstormed during the workshop: a map showing decisions near you, a database for traffic signs based on local decisions, a <todo>more examples</todo>Provide companies an overview of the fiscal taxes for any given municipality</p>
       
       <div id="example" class="no-print">
         <h3>Demo: Council of Vlavirgem</h3>
@@ -183,19 +187,19 @@
     <section id="sec_conclusion">
       <h1>Conclusion</h1>
       <p>
-        Although local council decisions contain authentic and qualitative information in the form of non-structured information, the information 
-        in the authoritative source for local mandates (one of the use cases of local council decisions) which is still filled in manually by local governments is lagging and not qualitative.
+        Although Local Council Decisions contain authentic and qualitative information in the form of non-structured data, the information 
+        in the authoritative source for local mandates (one of the use cases of Local Council Decisions) which is still filled in manually by local governments is lagging and not qualitative.
       </p>
       <p>              
-        <bold>The interviews with local governments</bold> indicated that information from local decisions (eg appointing a representative) could be transformed into a structured way, this will reduce the workload caused by reporting to external partners (regional government, re-use by the private sector) and also will increase the internal reuse of this information (eg. to publish local representatives on the website or register in the back-office systems for managing their loans.
+        <bold>The interviews with local governments</bold> indicated that information from local decisions (e.g. appointing a representative) could be transformed into a structured way to reduce the workload caused by reporting to external partners (regional government, re-use by the private sector) and to increase the internal reuse of this information (eg. to publish local representatives on the website or register in the back-office systems for managing their loans).
       </p>
       <p>
-        <bold>The proof of concept</bold> shows that (I) an end-to-end approach, based on the developed linked data method, is reachable and the process of making decisions will be more efficient: less manual work, governments may seek easier in regulation, the linked data allows easy to do an impact analysis when legislation is amended.
-        (II) We notice a quality gain in editing due to correct legal references (even referencing to decisions of their own municipality) and the use of qualitative factual data (eg. Addresses linked to the Central Reference Address Database, a regional base registry)
+        <bold>The proof of concept</bold> shows that (I) an end-to-end approach, based on the developed Linked Data method, is feasable and that it can make the decision making process more efficient: less manual work, governments may seek easier in regulation, the Linked Data allows easy to do an impact analysis when legislation is amended.
+        (II) We notice a quality gain in editing due to correct legal references (even referencing to decisions of their own municipality) and the use of qualitative factual data (eg. addresses linked to the Central Reference Address Database, a regional base registry)
         (III) Finally, there are also efficiency gains in the publication of the decisions that are automatically published on the website of the local government, in the the codex and without additional efforts  suitable for reuse by third parties (Open Data).
       </p>
       <p>
-        The insights created a political basis to build a base registry for local council decisions in line with the best practices of this study.
+        The insights created a political basis to build a base registry for Local Council Decisions in line with the best practices of this study.
         This project, funded by the Flemish Agency for Domestic Governance, is a stepstone in the transition of the Flemish Government towards an administration with a greater focus on policy development in terms of better administrative processes.
       </p>
     </section>
