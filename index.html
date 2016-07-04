@@ -100,7 +100,8 @@
       <h1>Abstract</h1>
       <p>
         Base registries are trusted authentic information sources controlled by 
-        an appointed public administration or organisation appointed by government.
+        an appointed public administration or organization appointed by the 
+        government.
         
         Maintaining a base registry comes with extra maintenance costs to create
         the dataset and keep it up to date.
@@ -109,7 +110,7 @@
         base registries at the core of existing administrative processes and to
         reduce the cost of maintaining a new data source.
         
-        We demonstrate a method to manage Local Council Decisions as Linked Data
+        We demonstrate a method to manage Local Council Decisions as Linked Data,
         which creates a new base registry for mandates.
         
         We found that no extra effort was needed in the process by local
@@ -127,11 +128,11 @@
         Local councils are empowered by law, to make decisions on matters of importance to local communities. Decisions are made in formally constituted council meetings. 
         In Flanders, local governments provide the decisions, or minutes, from these meetings to the Flemish Agency for Domestic Governance (ADG) as unstructured data. 
         These Council Decisions contain authentic and timely facts on e.g., resignation of a local counselor, the installation of a new one or the installation of a new traffic situation and their road signs. 
-        Local governments are the authoritative source for information, also available in autoritative registries, such as the registry of local councelors or the Road Sign Database (RSD).
+        Local governments are the authoritative source for information, also available in authoritative registries, such as the registry of local counselors or the Road Sign Database (RSD).
         In order to keep these registries up to date, local governments are obliged to update the
         information on local counselors or road signs manually into a separate application
         provided the Flemish Government. The quality of the resulting register is
-        suboptimal and information is lagging.  
+        suboptimal, and the information is lagging.  
       </p>
       <p>
         In this paper, we study applying Linked Data technologies to harvest the data
@@ -147,25 +148,25 @@
       <h1>State of the art</h1>
       <p>
         Today, European policies emphasize working on base registries, trusted datasets, authoritative sources and appoint responsible parties to collect certain information.
-        The European Commission defines a base registry (BR) as a <strong>trusted</strong> <strong>authentic</strong> source of information under the control of an appointed public administration or organisation <strong>appointed</strong> by government <todo>[5]</todo>. 
-        <strong>Trusted</strong> means that, in this case, the local government is managing the Local Council Decisions conformant to best practices in all European Interoperability Framework-domains [6], more specific at the level of semantic and organizational interoperability  and conformant to legal requirements in the Municipal Decree <todo>[7]</todo>. On a semantic level we have defined a vocabulary for council decisions. This vocabulary will be adopted by the interoperability programme of the Flemish Government , “Open Standards for Linked Organizations”  also referred to as “OSLO²”. OSLO² focuses on the semantic level and extends the ISA CORE Vocabularies <todo>[8]</todo> in order to facilitate the integration of the Flemish base registries with one another and their implementation in business processes of both the public and private sector <todo>[9]</todo>. At the organizational level we have organized working groups with experts from local and regional governments, where they have agreed on decentralized processes which provide data to the base registry, in line with the principles of Linked Data.
-        <strong>Authentic</strong> means that this is considered to be 'the' source of information which represents the correct status and which is kept constantly up-to-date and is of highest possible quality. This is achieved by avoiding copying information manually into a separate form or application. When the registered data is part of the core processes of the local administrations and used in their own information systems, we expect this will improve the quality.
+        The European Commission defines a base registry (BR) as a <strong>trusted</strong> <strong>authentic</strong> source of information under the control of an appointed public administration or organization <strong>appointed</strong> by the government <todo>[5]</todo>. 
+        <strong>Trusted</strong> means that, in this case, the local government is managing the Local Council Decisions conformant to best practices in all European Interoperability Framework-domains [6], more specific at the level of semantic and organizational interoperability  and conformant to legal requirements in the Municipal Decree <todo>[7]</todo>. On a semantic level we have defined a vocabulary for council decisions. This vocabulary will be adopted by the interoperability program of the Flemish Government, “Open Standards for Linked Organizations”  also referred to as “OSLO²”. OSLO² focuses on the semantic level and extends the ISA CORE Vocabularies <todo>[8]</todo> to facilitate the integration of the Flemish base registries with one another and their implementation in business processes of both the public and private sector <todo>[9]</todo>. At the organizational level we have organized working groups with experts from local and regional governments, where they have agreed on decentralized processes which provide data to the base registry, in line with the principles of Linked Data.
+        <strong>Authentic</strong> means that this is considered to be 'the' source of information which represents the correct status and which is kept constantly up-to-date and is of highest possible quality. This is achieved by avoiding copying information manually into a separate form or application. When the registered data is part of the core processes of the local administrations and used in their information systems, we expect this will improve the quality.
         <strong>Appointed</strong> means that the governing administration <!--, the AGD,--> has a legal basis to collect and maintain the respective information.
       </p>
       <p>
-        Maintaining a base registry comes with support and aligned processes at the level of the data providers, in this case the local government.
+        Maintaining a base registry comes with support and aligned processes at the level of the data providers, in this case, the local government.
       </p>
       <p>
         The RSD, which contains all road signs, their
-        characteristics and road positions, alike the registry of local councelors
+        characteristics and road positions, alike the registry of local counselors
         , did not live up to the expectations <todo>[1]</todo>.
-        The Flemish department for Mobility and Public Works created
+        The Flemish Department for Mobility and Public Works created
         the database and inventoried the road signs. It then asked its 308
         municipalities (for the municipal roads) <!-- and the Flemish Agency for Roads
         and Traffic (for the regional roads)--> to keep the database up-to-date.
-        The municipalities however did not kept the the database up to date<todo>[2]</todo>. 
+        The municipalities, however, did not keep the the database up to date<todo>[2]</todo>. 
         The evaluation of RSD shows low scores on information, service and system quality.
-        These negatively influence user satisfaction and (intention to) use RSD. 
+        These negative influence user satisfaction and (intention to) use RSD. 
         Combine this negative stream with a lack of purpose or expectation failure and users drop out. 
         Which in turn creates a lack of purpose of the register. The absence of net benefits will affect user
         satisfaction and intention to use <todo>[3]</todo>.
@@ -179,13 +180,13 @@
     <section id="sec_tools">
       <h1>Method and implementation</h1>
       <p>We interviewed 10 ICT service providers for their vision on Linked Data and studied local governments on how they register and publish Local Council Decisions.
-        We then organized 3 workshops which formulated the input for the proof of concept: two workshops were organized for creating a preliminary domain model, and 1 workshop was organized to create wireframes on how Local Council Decisions would be created and searched through in an ideal scenario.</p>
+        We then organized three workshops which formulated the input for the proof of concept: two workshops were organized for creating a preliminary domain model, and one workshop was organized to create wireframes on how Local Council Decisions would be created and searched through in an ideal scenario.</p>
       <p>The domain concepts were formalized into two Linked Data vocabularies: one for the metadata and one for describing public mandates, formalized in <a href="https://lblod.github.io/vocabulary">https://lblod.github.io/vocabulary.</a>
         The proof of concept consists of these components:
 	an editor for local decisions,
 	an HTML page publishing service responsible for URI dereferencing,
 	a crawler for local decisions and
-	2 reuse examples on top of the harvested data.
+	two reuse examples on top of the harvested data.
       </p>
     </section>
     
@@ -194,7 +195,7 @@
       <p>
         We introduce a virtual local government called Vlavirgem for which we can publish local decisions.
         The editor at <a href="https://lblod.github.io/editor">lblod.github.io/editor</a> is a proof of concept of such an editor, which reuses existing base registries.
-        You can choose to fill out a certain template for decisions that occur often, such as the resignation of a local counselor or the installation of a new one.
+        You can choose to fill out a certain template for decisions that often occur, such as the resignation of a local counselor or the installation of a new one.
         When filling out the necessary fields, the editor will help you: for example, it will autocomplete people that are currently in office.
         When all fields are filled out, you will still be able to edit the official document, which contains more information such as links to legal background, context and motivation, and metadata.
         At any time in the editor, you can click the JSON-LD button, which will show you the machine-readable data you have so far entered.
@@ -228,9 +229,9 @@
         <bold>The interviews with local governments</bold> indicated that information from local decisions (e.g. appointing a representative) could be transformed into a structured way to reduce the workload caused by reporting to external partners (regional government, re-use by the private sector) and to increase the internal reuse of this information (eg. to publish local representatives on the website or register in the back-office systems for managing their loans).
       </p>
       <p>
-        <bold>The proof of concept</bold> shows that (I) an end-to-end approach, based on the developed Linked Data method, is feasable and that it can make the decision making process more efficient: less manual work, governments may seek easier in regulation, the Linked Data allows easy to do an impact analysis when legislation is amended.
-        (II) We notice a quality gain in editing due to correct legal references (even referencing to decisions of their own municipality) and the use of qualitative factual data (eg. addresses linked to the Central Reference Address Database, a regional base registry)
-        (III) Finally, there are also efficiency gains in the publication of the decisions that are automatically published on the website of the local government, in the the codex and without additional efforts  suitable for reuse by third parties (Open Data).
+        <bold>The proof of concept</bold> shows that (I) an end-to-end approach, based on the developed Linked Data method, is feasible and that it can make the decision making process more efficient: less manual work, governments may seek easier in regulation, the Linked Data allows easy to do an impact analysis when legislation is amended.
+        (II) We notice a quality gain in editing due to correct legal references (even referencing to decisions of their municipality) and the use of qualitative factual data (e.g. addresses linked to the Central Reference Address Database, a regional base registry)
+        (III) Finally, there are also efficiency gains in the publication of the decisions that are automatically published on the website of the local government, in the codex and without additional efforts  suitable for reuse by third parties (Open Data).
       </p>
       <p>
         The insights created a political basis to build a base registry for Local Council Decisions in line with the best practices of this study.
@@ -252,7 +253,7 @@
           <!-- https://www.vlaamsparlement.be/parlementaire-documenten/schriftelijke-vragen/870453 -->
           Written question nr. 813 to minister Hilde Crevits by Lode Vereeck, 2013 and written question to minister Liesbeth Homans by Joris Vandenbroecke , 2016. <!--        http://docs.vlaamsparlement.be/pfile?id=1184683 -->          
         </li>
-        <li>Benbasat, I., Barki, H.: Quo vadis, TAM? Journal of Association for Information Systems 8(3), 211-218(2007); cited in Van Cauter, L et al. PA Meets IS Research: Analising Faillure of Intergovernemental Information Systems via IS Adoption and Success Models.</li>
+        <li>Benbasat, I., Barki, H.: Quo vadis, TAM? Journal of Association for Information Systems 8(3), 211-218(2007); cited in Van Cauter, L et al. PA Meets IS Research: Analising Faillure of Intergovernmental Information Systems via IS Adoption and Success Models.</li>
         <li>
           Belgian official journal (Belgisch Staatsblad, Moniteur Belge),  
           ref: (27/04/2007 Moniteur Belge, s05/11/2007, p. 56250-56256)
