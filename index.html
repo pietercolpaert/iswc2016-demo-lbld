@@ -92,7 +92,49 @@
       pc:before {
         content : "Pieter: ";
       }
+
+      .Table
+      {
+          display: table;
+          margin: auto;
+          table-layout: fixed;
+          width: 100%;
+          border-collapse: separate;
+          border-spacing: 10px;
+      }
+      .Title
+      {
+          display: table-caption;
+          text-align: center;
+          caption-side: bottom;
+      }
+      .Heading
+      {
+          display: table-row;
+          font-weight: bold;
+          text-align: center;
+      }
+      .Row
+      {
+          display: table-row;
+          text-align: center;
+          background-color: Gainsboro;
+      }
+      .Cell
+      {
+          display: table-cell;
+          border-radius: 10px;
+          border-width: thin;
+          padding-left: 5px;
+          padding-right: 5px;
+          text-align: center;
+          vertical-align:middle;
+      }
     </style>
+    
+  
+    
+    
   </head>
   <body>
     <!-- Abstract -->
@@ -149,7 +191,7 @@
         <!--Today, European policies emphasize working on base registries, trusted datasets, authoritative sources and appoint responsible parties to collect certain information.-->
         The European Commission <a href="http://ec.europa.eu/isa/actions/documents/isa_1.2_d1.2_base_registry_definition.pdf">defines a base registry (BR)</a> as a <strong>trusted</strong> <strong>authentic</strong> source of information under the control of an appointed public administration or organization <strong>appointed</strong> by the government.
         <strong>Trusted</strong> means that, in this case, the local government is managing the Local Council Decisions conformant to best practices in all European Interoperability Framework-domains <a href="#eif"> </a>, more specific at the level of semantic and organizational interoperability  and conformant to legal requirements in the <a href="http://codex.vlaanderen.be/Portals/Codex/documenten/1013949.html">Municipal Decree</a>.
-        On a semantic level we have defined a vocabulary for council decisions. This vocabulary will be adopted by the interoperability program of the Flemish Government, “Open Standards for Linked Organizations”  also referred to as “OSLO²”. OSLO² focuses on the semantic level and extends the ISA CORE Vocabularies <a href="#isahandbook"> </a> to facilitate the integration of the Flemish base registries with one another and their implementation in business processes of both the public and private sector <a href="#devidts"> </a>. At the organizational level we have organized working groups with experts from local and regional governments, where they have agreed on decentralized processes which provide data to the base registry, in line with the principles of Linked Data.
+        On a semantic level we have defined a vocabulary for council decisions. This vocabulary will be adopted by the interoperability program of the Flemish Government, “Open Standards for Linked Organizations”  also referred to as “OSLO²”. OSLO² focuses on the semantic level and extends the ISA CORE Vocabularies <a href="#isahandbook"> </a> to facilitate the integration of the Flemish base registries with one another and their implementation in business processes of both the public and private sector <a href="#vanlishout"> </a>. At the organizational level we have organized working groups with experts from local and regional governments, where they have agreed on decentralized processes which provide data to the base registry, in line with the principles of Linked Data.
         <strong>Authentic</strong> means that this is considered to be 'the' source of information which represents the correct status and which is kept constantly up-to-date and is of highest possible quality. This is achieved by avoiding copying information manually into a separate form or application. When the registered data is part of the core processes of the local administrations and used in their information systems, we expect this will improve the quality.
         <strong>Appointed</strong> means that the governing administration <!--, the AGD,--> has a legal basis to collect and maintain the respective information.
       </p>
@@ -164,7 +206,15 @@
         Local Council Decisions could provide valuable information however to such registries.
       </p>
       <p>
-        In the Netherlands, OpenRaadsInformatie.nl <todo>goal of the project...</todo>
+        <todo>
+          In the Netherlands, <a href="http://OpenRaadsInformatie.nl">OpenRaadsInformatie</a> a pilot which 
+          publishes information from local councils, including their decisions, as open Data in a machine readable format.
+          The goals are more transparency and democracy.
+          
+          The data from the municipalities is collected through an API's and by scraping websites and transformed to Linked Open Data.     
+          According to the project evaluation <a href="#kunzler"> </a>, the lack of metadata at the source causes a direct impact on the on the cohesion            between the different assets because they can't be interlinked.           
+          The Flemish Implementation, the data is 'linked' by the end-user, creating valuable links to other legislation, etc.           
+        </todo>
       </p>
     </section>
 
@@ -184,7 +234,7 @@
     <section id="sec_demo">
       <h1>Demo</h1>
       <p>
-        We introduce a virtual local government called Vlavirgem for which we can publish local decisions.
+        We introduce a virtual local government called VlaVirGem for which we can publish local decisions.
         The editor at <a href="https://lblod.github.io/editor">lblod.github.io/editor</a> is a proof of concept of such an editor, which reuses existing base registries.
         You can choose to fill out a certain template for decisions that often occur, such as the resignation of a local counselor or the installation of a new one.
         When filling out the necessary fields, the editor will help you: for example, it will autocomplete people that are currently in office.
@@ -198,6 +248,65 @@
         This data is the start of two reuse demos at <a href="http://vlavirgem.pieter.pm">http://vlavirgem.pieter.pm</a>: the first for generating an automatic list of mandates, and the second is a list of local decisions.</p>
       
       <div id="example" class="no-print">
+        <div class="Table">
+          <div class="Title">
+            <p>Table 1. Components of the proof-of-concept</p>
+          </div>
+          <div class="Heading">
+            <div class="Cell">
+              <p><img src="images/city-hall.png" alt="city-hall" width="65"></img></p>
+            </div>
+            <div class="Cell">
+              <p><img src="images/document-editor.png" alt="document" width="65"></img></p>
+            </div>
+            <div class="Cell">
+              <p><img src="images/triplestore.png" alt="triplestore" width="65"></img></p>
+            </div>
+            <div class="Cell">
+              <p><img src="images/city-hall.png" alt="city-hall" width="65"></img></p>
+            </div>
+            <div class="Cell">
+              <p><img src="images/document-search.png" alt="document search" width="65"></img></p>
+            </div>
+          </div>
+          <div class="Row">
+            <div class="Cell">
+              <p><a href="http://vlavirgem.pieter.pm/gemeenteraad.html">Website of VlaVirGem</a></p>
+            </div>
+            <div class="Cell">
+              <p><a href="http://lblod.github.io/editor/">Editor for local decisions</a></p>
+            </div>
+            <div class="Cell">
+              <p><a href="http://lblod.pieter.pm/">Triplestore</a></p>
+            </div>
+            <div class="Cell">
+              <p><a href="http://vlavirgem.pieter.pm/">Website of VlaVirGem</a></p>
+            </div>
+            <div class="Cell">
+              <p><a href="http://lblod.github.io/search/">Search</a></p>
+            </div>
+          </div>
+          <div class="Row">
+            <div class="Cell">
+              <p>Overview of the elected councillors</p>
+            </div>
+            <div class="Cell">
+              <p>Start or terminate a mandate</p>
+            </div>
+            <div class="Cell">
+              <p>Machine readable decisions</p>
+            </div>
+            <div class="Cell">
+              <p>Overview of the local decisions and the composition of the local council</p>
+            </div>
+            <div class="Cell">
+              <p>Find a local decision or mandate</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="example" class="no-print">
         <h2>Demo: Council of Vlavirgem</h2>
         <p>When everything went right, you should be able to see the list of local representatives down here. If you do not believe that someone is a local representative in your city's council, you can click the "Oh yeah?" button, which will link you to the official publication of the local decision.</p>
         <ul id="list">
@@ -209,7 +318,10 @@
       <p>
         Although Local Council Decisions contain authentic and qualitative information in the form of non-structured data, the information 
         in the authoritative source for local mandates - one of the use cases of Local Council Decisions - is not qualitative.              
-        The interviews with local governments indicate that information from local decisions (e.g. appointing a representative) could be transformed into a structured way to reduce the workload caused by reporting to external partners (regional government, re-use by the private sector) and to increase the internal reuse of this information (eg. to publish local representatives on the website).
+        The interviews with local governments indicate that information from local decisions (e.g. appointing a representative) could be transformed into a structured way to reduce the workload caused by reporting to external partners (regional government, re-use by the private sector) and to increase the internal reuse of this information (eg. to publish local representatives on the website). 
+        <todo>
+          We have learned from the interviewed Service Providers that they were not all familiar with the concept of Linked Data. [staat hier een beetje verloren. meerwaarde? weglaten?]
+        </todo>
       </p>
       <p>
         The proof of concept shows that (I) an end-to-end approach, based on the developed Linked Data method, is feasible and that it can make the decision making process more efficient: less manual work, governments may seek easier in regulation, the Linked Data allows easy to do an impact analysis when legislation is amended.
@@ -218,11 +330,11 @@
         The insights created a political basis to build a base registry for Local Council Decisions in line with the best practices of this study.
         This project, funded by the Flemish Agency for Domestic Governance and Flanders Information Agency (Flanders Radically Digital Programme), is a stepstone in the transition of the Flemish Government towards an information driven administration with simplified processes and better public services.
       </p>
-      <todo>
-        <lu>
-          <li>Add Lessons learned for SW community: bring semantics closer to core processes.
-          <li>Service providers were not all familiar with the concept of Linked Data
-        </lu>
+      <todo>               
+            <p>
+            As a more general advice to the semantic web community, 
+            we have learned that it is feasible to bring the semantics to 'the fingertips' of the end-user by providing intuitive tools for writing linked data. Because the user often has a good business knowledge, this will result in a better data-quality than post processing the data and mapping the semantics.  
+            </p>
       </todo>
     </section>
     
@@ -243,12 +355,15 @@
         <li id="isahandbook" role="doc-biblioentry">
           European Commission, ISA: <a href="https://joinup.ec.europa.eu/site/core_vocabularies/Core_Vocabularies_user_handbook">ISA handbook for using Core Vocabularies (November 2014)</a>
         </li>
-        <li id="devidts" role="doc-biblioentry">
+        <li id="vanlishout" role="doc-biblioentry">
           Vanlishout, Z.: <a href="https://joinup.ec.europa.eu/sites/default/files/ckeditor_files/files/SEMIC_Linked%20Base%20Registries%20as%20a%20key%20enabler%20in%20Flanders%20-%200_7.pdf">EU Core Vocabularies in Action: Linked Base Registries as a key enabler for eGovernment in Flanders.</a> (2016)
         </li>
+        </li>
+        <li id="kunzler" role="doc-biblioentry">
+          Kunzler,K: , Z.: <a href="http://vng.nl/files/vng/20151112_eindrapportageopenraadsinformatiedefinitief.pdf">Pilot Open Raadsinformatie Eindrapportage</a>: 17 (2016)
+        </li>        
       </ol>
-    </section>
-    
+    </section>    
     <!-- Footnotes -->
     <!--<section role="doc-footnotes">
       <section id="fn1" role="doc-footnote">
